@@ -29,7 +29,7 @@ app.post("/chat", async (req, res) => {
         const fullPrompt = `${SYSTEM_PROMPT}\n\nUser: ${message}\nBot:`;
 
         const response = await axios.post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro :generateContent?key=" +
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" +
             process.env.GEMINI_API_KEY,
             {
                 contents: [
